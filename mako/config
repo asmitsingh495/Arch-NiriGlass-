@@ -1,0 +1,26 @@
+# Font
+font=JetBrainsMono Nerd Font 11
+
+# Glass / transparent look
+background-color=#1e1e1e60
+text-color=#ffffff
+border-color=#89b4fa
+
+# Size
+width=350
+height=120
+
+# Spacing
+outer-margin=8
+margin=10
+padding=12
+
+# Rounded corners
+border-size=2
+border-radius=8
+
+# Notification stays for 5 seconds
+default-timeout=5000
+
+# Text format
+format=<b>%s</b>\n%b

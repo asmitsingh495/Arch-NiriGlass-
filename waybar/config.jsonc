@@ -1,0 +1,84 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 30,
+
+  "modules-left": [
+        "niri/workspaces",
+        "wlr/taskbar"
+  ],
+
+  "modules-center": [
+     "clock"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "temperature",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray",
+    "custom/power"
+  ],
+
+  "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 22,
+        "icon-theme": "Adwaita",
+        "tooltip-format": "{title}",
+        "on-click": "activate",       // Click karte hi window open/focus ho jayegi
+        "on-click-middle": "close",   // Middle click se window close ho jayegi
+        "all-outputs": true
+  },
+
+  "clock": {
+    "format": "Adolf - {:%H:%M}"
+  },
+
+  "cpu": {
+    "format": "CPU: {}% |"
+  },
+
+  "memory": {
+    "format": "RAM: {}% |"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "TEMP: {}°C |"
+  },
+
+  "backlight": {
+    "format": "☀: {}% |"
+  },
+
+  "pulseaudio": {
+    "format": "VOL: {volume}% |",
+    "format-muted": "VOL: muted |",
+    "on-click": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": "NET: {essid}: {ipaddr} |",
+    "format-ethernet": "NET: Connected |",
+    "format-disconnected": "NET: Offline |"
+  },
+
+  "battery": {
+    "format": "BAT🔋: {capacity}% |",
+    "format-charging": "CHG⚡: {capacity}% |",
+    "format-plugged": "PLUG: {capacity}% |"
+  },
+
+  "tray": {
+    "spacing": 10
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout"
+  }
+}
