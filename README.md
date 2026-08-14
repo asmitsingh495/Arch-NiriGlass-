@@ -52,6 +52,46 @@ niri --config ./config/niri/config.kdl
 <img width="1900" height="1080" alt="Screenshot from 2026-08-14 09-08-28" src="https://github.com/user-attachments/assets/60af8c8f-d49c-4b7c-8e29-453f4550c8a7" />
 <img width="1334" height="855" alt="Screenshot from 2026-08-14 09-12-15" src="https://github.com/user-attachments/assets/fe59edea-ce48-4eb0-8d3e-6fcea92e24b1" />
 
+## 🎨 Blur & Transparency Customization Guide
+
+If you want to adjust the frost-glass blur intensity or window transparency to match your aesthetic preference, follow the simple tweaks below:
+
+### 🪟 1. Adjusting Niri Window Blur & Opacity
+Open your Niri configuration file located at `~/.config/niri/config.kdl`. Locate the `window-rule` block for Alacritty (shown below) and modify the values:
+
+```kdl
+// Blur behind Alacritty
+window-rule {
+    # 0.10 is completely transparent, 1.00 is completely solid color
+    opacity 0.80 
+
+    draw-border-with-background false
+
+    background-effect {
+        # Set to 'false' if you want transparency without any blur effect
+        blur true
+    }
+}
+```
+* **To Increase Glass/Blur Effect**: Lower the `opacity` value (e.g., `0.70` or `0.75`).
+* **To Reduce Glass/Blur Effect**: Increase the `opacity` value closer to solid state (e.g., `0.90` or `0.95`).
+
+---
+
+### 🔔 2. Adjusting Mako Notification Blur & Opacity
+Open your Mako notification daemon config file located at `~/.config/mako/config`. To control the card transparency and background styling, tweak these lines inside the profile:
+
+```ini
+# Modify the background color using HEX with alpha transparency channel (RGBA)
+# Format: #RRGGBBAA (The last two characters control the window opacity)
+background-color=#1e1e2ecc
+
+# Example transparency variants for background-color:
+# #1e1e2e77 -> Highly Transparent (More Glass Look ✨)
+# #1e1e2eff -> Completely Solid Color (No Transparency 🔒)
+```
+
+After updating your Mako config, run `makoctl reload` in your terminal to apply changes instantly without reloading your session.
 
 ---
 
