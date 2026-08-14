@@ -22,7 +22,7 @@ To pull down the configuration arrays and synchronize your environment workspace
 
 ```bash
 git clone https://github.com/asmitsingh495/Arch-NiriGlass-
-cd NiriGlass
+cd Arch-NiriGlass-
 chmod +x install.sh
 ./install.sh
 ```
