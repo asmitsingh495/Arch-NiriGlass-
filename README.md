@@ -21,7 +21,7 @@ The setup seamlessly provisions and links the following system endpoints:
 To pull down the configuration arrays and synchronize your environment workspace instantly, execute the bootstrap controller sequence:
 
 ```bash
-git clone https://github.com
+git clone https://github.com/asmitsingh495/Arch-NiriGlass-
 cd NiriGlass
 chmod +x install.sh
 ./install.sh
